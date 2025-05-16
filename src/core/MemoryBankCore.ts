@@ -158,5 +158,28 @@ export class MemoryBankCore {
     // Optionally, parse and validate more structure with Zod in future
   }
 
+  /**
+   * Read a chunk of a memory bank file asynchronously.
+   * @param relativePath Path relative to the memory bank root
+   * @param chunkIndex Zero-based index of the chunk
+   * @param chunkSize Size of each chunk in bytes (default: 15000)
+   * @returns The chunk as a string, or an empty string if out of range
+   */
+  async readFileChunked(relativePath: string, chunkIndex: number, chunkSize = 15000): Promise<string> {
+    const filePath = path.join(this.baseDir, relativePath);
+    const handle = await fs.open(filePath, 'r');
+    try {
+      const { size } = await handle.stat();
+      const start = chunkIndex * chunkSize;
+      if (start >= size) return '';
+      const end = Math.min(start + chunkSize, size);
+      const buffer = Buffer.alloc(end - start);
+      await handle.read(buffer, 0, end - start, start);
+      return buffer.toString('utf8');
+    } finally {
+      await handle.close();
+    }
+  }
+
   // TODO: Add Zod validation for other file types, self-healing logic, chunked access, and logging as per docs/dev/memory-bank-core.md
 }
