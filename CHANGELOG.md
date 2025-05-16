@@ -27,6 +27,8 @@
 - Updated README with CLI usage instructions and examples
 - Added `write` command to CLI for writing content to a memory bank file
 - Updated README with CLI usage instructions and examples for the write command
+- Extended Zod validation in MemoryBankCore to productContext.md and activeContext.md. Validation now enforced for all core context files.
+- Validation is now enforced on writeFile for core context files (projectbrief.md, productContext.md, activeContext.md) in MemoryBankCore. Invalid files cannot be saved. 🐹
 
 ---
 
