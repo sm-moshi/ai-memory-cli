@@ -1,6 +1,6 @@
 # AI Memory CLI for Cursor 🐹
 
-> **CLI‑first memory‑bank toolkit for Cursor’s Model‑Context‑Protocol — persistent context, `/memory` & `/note` commands, zero UI.**
+> **CLI‑first memory‑bank toolkit for Cursor's Model‑Context‑Protocol — persistent context, `/memory` & `/note` commands, zero UI.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![npm](https://img.shields.io/npm/v/ai-memory-cli.svg?label=npm)
@@ -25,10 +25,10 @@ _AI Memory CLI_ fills that gap:
 * **Stores** rich markdown memory in a modular folder.
 * **Serves** it through an MCP stdio server (`ai-memory-cli`).
 * **Responds** to chat commands like `/memory status`, `/note`, `/plan`.
-* **Logs** neatly to VS Code / Cursor *Output* channel.
+* **Logs** neatly to VS Code / Cursor *Output* channel.
 * **No WebView, no Electron overhead**.
 
-## Quick start
+## Quick start
 
 ```bash
 # one‑shot
@@ -40,7 +40,7 @@ pnpm build:cli
 ./dist/ai-memory-cli --stdio
 ```
 
-*Requires Node ≥ 20.19 and TypeScript ≥ 5.4 (bundled).*
+*Requires Node ≥ 20.19 and TypeScript ≥ 5.4 (bundled).*
 
 ## Features
 
@@ -53,7 +53,7 @@ pnpm build:cli
 | 🔄      | Agent/Command (chat) support                           |
 | 🔄      | Rules-driven, template-based onboarding & repair       |
 | 🔄      | Chunked read/write (v0.4)                              |
-| 🔄      | Planner + `/plan` (v0.4)                               |
+| 🔄      | Planner + `/plan` (v0.4)                               |
 | 🧪      | Lightweight NLP `/note` prototype                      |
 
 ## Roadmap
@@ -68,3 +68,24 @@ Fully re‑architected & actively maintained by **@sm‑moshi** since `v0.3.0‑
 ## License
 
 MIT – see [LICENSE](LICENSE).
+
+## CLI Usage
+
+The AI Memory CLI provides commands to interact with your memory bank:
+
+```sh
+ai-memory-cli status
+ai-memory-cli read <relativePath>
+ai-memory-cli chunk <relativePath> <chunkIndex> [chunkSize]
+ai-memory-cli list <subfolder>
+```
+
+- `status`: Checks if the memory bank is initialised and healthy.
+- `read <relativePath>`: Reads and prints the contents of a memory bank file.
+- `chunk <relativePath> <chunkIndex> [chunkSize]`: Reads a chunk of a file (default chunk size: 15,000 bytes).
+- `list <subfolder>`: Lists all files in the given memory bank subfolder (e.g., `core`, `systemPatterns`).
+
+Example:
+```sh
+ai-memory-cli list core
+```

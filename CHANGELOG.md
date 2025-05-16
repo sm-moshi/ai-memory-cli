@@ -23,6 +23,8 @@
 - Chunked read/write (v0.4)
 - Planner + `/plan` (v0.4)
 - Lightweight NLP `/note` prototype
+- Added `list` command to CLI for listing files in a memory bank subfolder
+- Updated README with CLI usage instructions and examples
 
 ---
 
