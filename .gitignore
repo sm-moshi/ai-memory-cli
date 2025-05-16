@@ -3,6 +3,7 @@
 
 # Repomix
 .repomix/
-not-docs/
 docs/wip/
+docs/not-docs/
 .cursor/rules/memory-bank.mdc
+node_modules/
