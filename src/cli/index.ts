@@ -64,8 +64,21 @@ async function main() {
         process.exit(1);
       }
       break;
+    case 'write':
+      if (!args[0] || !args[1]) {
+        console.error('Usage: ai-memory-cli write <relativePath> <content>');
+        process.exit(1);
+      }
+      try {
+        await core.writeFile(args[0], args[1]);
+        console.log(`Successfully wrote to ${args[0]}`);
+      } catch (err) {
+        console.error('Error writing file:', err);
+        process.exit(1);
+      }
+      break;
     default:
-      console.log('Usage: ai-memory-cli <status|read|chunk|list> [...]');
+      console.log('Usage: ai-memory-cli <status|read|chunk|list|write> [...]');
       process.exit(1);
   }
 }
