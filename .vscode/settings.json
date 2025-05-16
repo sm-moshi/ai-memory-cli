@@ -1,0 +1,10 @@
+{
+	"cursor.composer.shouldAllowCustomModes": true,
+	"cursor.composer.shouldChimeAfterChatFinishes": true,
+	"cursor.composer.shouldQueueWhenGenerating": true,
+	"cursor.composer.shouldShowMarkdownHoverParticipantActions2": true,
+	"cursor.cpp.disabledLanguages": [
+		"plaintext"
+	],
+	"cursor.general.enableShadowWorkspace": true,
+	"cursor.preferNotificationsSameAsChat": true}
