@@ -25,6 +25,8 @@
 - Lightweight NLP `/note` prototype
 - Added `list` command to CLI for listing files in a memory bank subfolder
 - Updated README with CLI usage instructions and examples
+- Added `write` command to CLI for writing content to a memory bank file
+- Updated README with CLI usage instructions and examples for the write command
 
 ---
 

@@ -78,14 +78,17 @@ ai-memory-cli status
 ai-memory-cli read <relativePath>
 ai-memory-cli chunk <relativePath> <chunkIndex> [chunkSize]
 ai-memory-cli list <subfolder>
+ai-memory-cli write <relativePath> <content>
 ```
 
 - `status`: Checks if the memory bank is initialised and healthy.
 - `read <relativePath>`: Reads and prints the contents of a memory bank file.
 - `chunk <relativePath> <chunkIndex> [chunkSize]`: Reads a chunk of a file (default chunk size: 15,000 bytes).
 - `list <subfolder>`: Lists all files in the given memory bank subfolder (e.g., `core`, `systemPatterns`).
+- `write <relativePath> <content>`: Writes the given content to the specified memory bank file.
 
 Example:
 ```sh
 ai-memory-cli list core
+ai-memory-cli write core/test.md "Hello, Memory Bank!"
 ```
