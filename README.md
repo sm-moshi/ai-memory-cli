@@ -87,6 +87,8 @@ ai-memory-cli write <relativePath> <content>
 - `list <subfolder>`: Lists all files in the given memory bank subfolder (e.g., `core`, `systemPatterns`).
 - `write <relativePath> <content>`: Writes the given content to the specified memory bank file.
 
+> **Note:** Validation is enforced on both read and write for `core/projectbrief.md`, `core/productContext.md`, and `core/activeContext.md`. If a required section is missing, the operation will fail with a clear error. To fix, ensure your file includes all required headings as shown in the templates.
+
 Example:
 ```sh
 ai-memory-cli list core

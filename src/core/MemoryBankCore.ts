@@ -111,19 +111,31 @@ export class MemoryBankCore {
   async readFile(relativePath: string): Promise<string> {
     const filePath = path.join(this.baseDir, relativePath);
     const content = await fs.readFile(filePath, 'utf8');
-    // Validate projectbrief.md if applicable
+    // Validate files if applicable
     if (relativePath === 'core/projectbrief.md') {
       this.validateProjectBrief(content);
+    } else if (relativePath === 'core/productContext.md') {
+      this.validateProductContext(content);
+    } else if (relativePath === 'core/activeContext.md') {
+      this.validateActiveContext(content);
     }
     return content;
   }
 
   /**
-   * Write to a memory bank file asynchronously.
+   * Write to a memory bank file asynchronously, enforcing validation if applicable.
    * @param relativePath Path relative to the memory bank root
    * @param content File content to write
    */
   async writeFile(relativePath: string, content: string): Promise<void> {
+    // Validate files if applicable before writing
+    if (relativePath === 'core/projectbrief.md') {
+      this.validateProjectBrief(content);
+    } else if (relativePath === 'core/productContext.md') {
+      this.validateProductContext(content);
+    } else if (relativePath === 'core/activeContext.md') {
+      this.validateActiveContext(content);
+    }
     const filePath = path.join(this.baseDir, relativePath);
     await fs.writeFile(filePath, content, 'utf8');
   }
@@ -153,6 +165,48 @@ export class MemoryBankCore {
     for (const heading of requiredHeadings) {
       if (!heading.test(content)) {
         throw new Error(`projectbrief.md is missing required section: ${heading}`);
+      }
+    }
+    // Optionally, parse and validate more structure with Zod in future
+  }
+
+  /**
+   * Validate the structure of productContext.md using Zod.
+   * Checks for required headings as a simple structure validation.
+   * Throws if validation fails.
+   */
+  validateProductContext(content: string): void {
+    const requiredHeadings = [
+      /^# Product Context/m,
+      /^## Why this project exists/m,
+      /^## Problems it solves/m,
+      /^## How it should work/m,
+      /^## User experience goals/m
+    ];
+    for (const heading of requiredHeadings) {
+      if (!heading.test(content)) {
+        throw new Error(`productContext.md is missing required section: ${heading}`);
+      }
+    }
+    // Optionally, parse and validate more structure with Zod in future
+  }
+
+  /**
+   * Validate the structure of activeContext.md using Zod.
+   * Checks for required headings as a simple structure validation.
+   * Throws if validation fails.
+   */
+  validateActiveContext(content: string): void {
+    const requiredHeadings = [
+      /^# Active Context/m,
+      /^## Current work focus/m,
+      /^## Recent changes/m,
+      /^## Next steps/m,
+      /^## Active decisions and considerations/m
+    ];
+    for (const heading of requiredHeadings) {
+      if (!heading.test(content)) {
+        throw new Error(`activeContext.md is missing required section: ${heading}`);
       }
     }
     // Optionally, parse and validate more structure with Zod in future
