@@ -16,10 +16,11 @@
     "dev": "node dist/ai-memory-cli.js --stdio"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.11.2",
+    "@modelcontextprotocol/sdk": "1.11.3",
     "zod": "3.24.4"
   },
   "devDependencies": {
+    "@types/node": "^22.15.18",
     "esbuild": "0.25.4",
     "typescript": "5.8.3"
   }
