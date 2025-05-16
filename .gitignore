@@ -1,0 +1,6 @@
+# General
+.DS_Store
+
+# Repomix
+.repomix/
+not-docs/
