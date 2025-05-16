@@ -1,0 +1,84 @@
+---
+description:
+globs: .git/,.gitignore,.gitattributes,*git*
+alwaysApply: false
+---
+# 🚦 Cursor Git Flow Rules
+
+> **Applies to all git-enabled projects.**
+> Ensures robust, automatable, and team-friendly workflows using the Git Flow model.
+
+_Last updated: 2025-05-15_
+
+## Purpose
+
+* Enforce a clear, safe, and auditable branching model
+* Automate and document best practices for releases, hotfixes, and collaboration
+* Prevent common git anti-patterns and mistakes
+
+---
+
+## Core Principles
+
+- **Branching Model:**
+  - Use `main` (or `master`) for production-ready code
+  - Use `develop` for ongoing integration
+  - Create `feature/*` branches from `develop`
+  - Create `release/*` branches from `develop`
+  - Create `hotfix/*` branches from `main`
+
+- **Merging & Releases:**
+  - No direct commits to `main` or `develop` (enforce Pull Requests)
+  - All merges require code review and passing CI
+  - Tag all releases and hotfixes
+  - Merge releases and hotfixes back to both `main` and `develop`
+
+- **Safety & Automation:**
+  - No force-pushes to protected branches
+  - Require backup or checkpoint before hotfixes
+  - Use automation for branch naming, tagging, and release notes
+
+- **Best Practices:**
+  - Write clear, descriptive commit messages
+  - Reference issues in PRs and commits
+  - Keep feature branches short-lived
+  - Regularly sync `develop` with `main` after releases
+
+- **Anti-Patterns & Safety Checks:**
+  - No direct commits to protected branches
+  - No unreviewed merges
+  - No untagged releases
+  - No long-lived, stale branches
+
+---
+
+## File References
+
+- [README.md](mdc:README.md) – Project overview and workflow summary
+- [ROADMAP.md](mdc:ROADMAP.md) – Release planning and milestones
+- [docs/guides/quickstart.md](mdc:docs/guides/quickstart.md) – Onboarding and workflow basics
+- [docs/guides/advanced-features.md](mdc:docs/guides/advanced-features.md) – Advanced git usage
+
+---
+
+## Enforcement & Automation
+
+- These rules are always active for any project with a `.git/` directory or git config files.
+- Cursor agents should:
+  - Block direct commits to `main`/`develop`
+  - Require PRs for all merges
+  - Enforce tagging for releases/hotfixes
+  - Warn on force-push attempts
+  - Suggest branch naming conventions
+  - Remind to update documentation on major releases
+
+---
+
+## Review & Updates
+
+- Review this ruleset quarterly or after major workflow changes.
+- Update file references and best practices as needed.
+
+---
+
+_Last updated: 2025-05-15_

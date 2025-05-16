@@ -1,0 +1,85 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# 🛠  Internal Memory‑Bank Rules (Development)
+
+> **Not shipped** in production builds.
+> Loaded only while **developing** the AI Memory CLI.
+
+_Last updated: 2025-05-15_
+
+## Purpose
+
+* Preserve architecture & TODOs across Cursor resets.
+* Permit helper MCP tools for research/reasoning.
+* Avoid pay‑walled services ⚠️ -
+* Use MCP tools where you ever needed.
+
+---
+
+
+## Must‑Load on Reset
+
+* `core/projectbrief.md` – vision
+* `core/activeContext.md` – current focus
+* `progress/current.md` – in‑flight tasks
+* `docs/IMPLEMENTATION.md` – checklist
+
+Call **`read-memory-bank-files()`** first thing.
+
+---
+
+
+## 🛠 Allowed Helper Tools
+
+| Tool (server)                                                             | Strength                         |
+| ------------------------------------------------------------------------- | -------------------------------- |
+| **sequentialthinking** (@modelcontextprotocol/server-sequential-thinking) | canonical step‑by‑step reasoning |
+| **sequentialthinking** (@waldzellai/clear-thought)                        | adds mental‑model prompts        |
+| **context7**                                                              | pulls official docs & examples   	|
+| **codex-keeper**                                                          | pulls official docs & examples   	|
+| *any public MIT/Apache server*                                            | okay if no paywall               |
+
+**Usage rules**
+
+1. Prefer the *smallest* helpful set.
+2. Respect each tool’s `rateLimit`.
+3. Ask before writing outside `memory-bank/**`.
+4. Log usage to `progress/current.md`:
+
+```
+- Used <tool> for <reason> → <outcome>
+```
+
+---
+
+
+## Tool Status Table
+
+| Tool                     | Dev status  |
+| ------------------------ | ----------- |
+| initialize-memory-bank   | 🔄 porting     |
+| read-memory-bank-files   |🔄 porting     |
+| update-memory-bank-file  | 🔄 porting   |
+| get-memory-bank-metadata | ⏳ todo      |
+| append-note              | 🧪 prototype |
+| update-current-plan      | 🗓 planned   |
+
+---
+
+
+## 🧠 Implementation Notes & Best Practices
+
+* Self‑healing: CLI auto‑creates missing folders/files on load.
+* Shared core logic: src/core modules feed both CLI and (future) VSIX.
+* Cursor config: CLI updates `.cursor/mcp.json` automatically.
+* Chunked access: implemented v0.4; prototype in progress.
+
+## Release Checklist
+
+- Swap to neutral user ruleset.
+- Remove all `TODO(dev)` markers.
+
+_Last updated: 2025-05-15_
