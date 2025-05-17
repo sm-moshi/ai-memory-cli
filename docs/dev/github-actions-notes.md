@@ -49,4 +49,4 @@ This file documents additional steps for robust CI/CD and git-flow enforcement t
 
 ---
 
-These steps complement the automated workflows already implemented in `.github/workflows/`. For further customisation, see the official documentation or request additional workflow examples. 🐹
+These steps complement the automated workflows already implemented in `.github/workflows/`. For further customisation, see the official documentation or request additional workflow examples.

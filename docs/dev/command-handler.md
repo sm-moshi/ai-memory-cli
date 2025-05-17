@@ -1,4 +1,4 @@
-# Developer Guide: Command Handler 🐹
+# Developer Guide: Command Handler
 
 ## Overview
 The Command Handler module processes direct commands from Cursor (e.g., `/memory`, `/note`, `/plan`) and routes them to the appropriate MCP tools. It acts as the interface between user/agent input and the memory bank's core logic.

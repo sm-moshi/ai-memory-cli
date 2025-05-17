@@ -1,4 +1,4 @@
-# Developer Guide: Rules Engine 🐹
+# Developer Guide: Rules Engine
 
 ## Overview
 The Rules Engine module parses and enforces project rules defined in `.mdc` files (e.g., `memory-bank.dev.mdc`, `memory-bank.user.mdc`). It ensures all memory bank operations follow safety, consent, and best-practice guidelines.

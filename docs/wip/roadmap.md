@@ -11,29 +11,31 @@ Empower Cursor and VS Code users with a robust, modular, and user-editable memor
 ## Milestones
 
 ### v0.1.x (Complete)
-- [~] Modular memory bank structure (`core/`, `systemPatterns/`, `techContext/`, `progress/`)
-- [~] MCP server with robust error handling and port failover
-- [~] Webview UI for memory bank management (init, update, feedback)
-- [~] Migration logic for flat → modular memory bank
-- [~] Public documentation in `docs/`, private memory in `memory-bank/`
-- [~] Cursor 0.49+ and VS Code compatibility
-- [~] Ignore files reviewed and fixed; packaging issues resolved; 0.1.5 is new stable baseline (May 2025)
+- [x] Modular memory bank structure (`core/`, `systemPatterns/`, `techContext/`, `progress/`)
+- [x] MCP server with robust error handling
+- [ ] Webview UI for memory bank management (not present in CLI codebase)
+- [x] Migration logic for flat → modular memory bank
+- [x] Public documentation in `docs/`, private memory in `memory-bank/`
+- [x] Cursor 0.49+ and VS Code compatibility
+- [x] Ignore files reviewed and fixed; packaging issues resolved; 0.1.5 is new stable baseline (May 2025)
 
 ### v0.2.x (Current)
-- [~] Full modularisation of codebase (core, mcp, webview, types, utils, test)
-- [~] MCP CLI/stdio entrypoint for Cursor-first operation
-- [~] Webview UI overhaul (React/Tailwind, status, repair, management)
-- [~] Self-healing memory bank and rules management
-- [~] MCP tools exposed and robust
-- [~] Refactor extension to remove Express and use Cursor/VS Code APIs for all communication (in progress)
-- [~] User-configurable log levels for Output Channel (in progress)
-- [~] Webview error and event reporting to Output Channel (in progress)
+- [x] Full modularisation of codebase (core, mcp, webview, types, utils, test)
+- [x] MCP CLI/stdio entrypoint for Cursor-first operation
+- [ ] Webview UI overhaul (React/Tailwind, status, repair, management) (not present in CLI codebase)
+- [x] Self-healing memory bank and rules management (rules parsing not yet implemented)
+- [x] MCP tools exposed and robust
+- [ ] Refactor extension to remove Express and use Cursor/VS Code APIs for all communication (not present in CLI codebase)
+- [ ] User-configurable log levels for Output Channel (not implemented)
+- [ ] Webview error and event reporting to Output Channel (not present in CLI codebase)
 - [ ] Version control integration for memory bank files
 - [ ] Enhanced webview: file previews, diffs, and history
 - [ ] Visualisation tools for memory relationships (webview)
 - [ ] More granular permissions and user roles
-- [ ] Add 'AI Memory: Create Memory Bank Rule' command to create/restore memory-bank.mdc from template or rules source
-- [ ] Implement user prompt to overwrite if file exists (see cursor-rules-service.ts)
+- [ ] Add 'AI Memory: Create Memory Bank Rule' command to create/restore memory-bank.mdc from template or rules source (not implemented)
+- [ ] Implement user prompt to overwrite if file exists (see cursor-rules-service.ts) (not implemented)
+- [ ] Implement rules parsing and command handler logic (not implemented)
+- [ ] Implement /plan command and planner logic (not implemented)
 
 ### v1.0.0 (Stable)
 - [ ] Full test coverage and CI/CD for all features
@@ -55,22 +57,22 @@ Empower Cursor and VS Code users with a robust, modular, and user-editable memor
 
 ## Action Plan (May 2025)
 
-- [~] Refactor extension to modular, Cursor-first structure (core, mcp, webview, types, utils, test)
-- [~] Add MCP CLI/stdio entrypoint for Cursor-first operation
-- [~] Webview UI overhaul and robust feedback
-- [~] Self-healing memory bank and rules management
-- [~] Remove Express and use Cursor/VS Code APIs for all communication (in progress)
-- [~] User-configurable log levels and webview error/event reporting (in progress)
+- [x] Refactor extension to modular, Cursor-first structure (core, mcp, webview, types, utils, test)
+- [x] Add MCP CLI/stdio entrypoint for Cursor-first operation
+- [ ] Webview UI overhaul and robust feedback (not present in CLI codebase)
+- [x] Self-healing memory bank and rules management (rules parsing not yet implemented)
+- [ ] Remove Express and use Cursor/VS Code APIs for all communication (not present in CLI codebase)
+- [ ] User-configurable log levels and webview error/event reporting (not implemented)
 - [ ] Version control integration, advanced UI, and chunked file access (future)
 - [ ] Test activation, command registration, and MCP tool operation in Cursor (and optionally VS Code)
 - [ ] Document findings and next steps in this ROADMAP.
 
 ---
 
-**Notes (2025-05-13):**
+**Notes (2025-05-17):**
 - The codebase is now Cursor-first, with VS Code compatibility as a bonus.
-- Modularisation, webview overhaul, MCP CLI/stdio, and self-healing are complete.
-- Express removal is the last major refactor in progress.
+- Modularisation, MCP CLI/stdio, and self-healing are complete.
+- Rules parsing, command handler, /plan command, and output channel logger are not implemented.
 - Docs, rules, and packaging are up-to-date.
 
 For a detailed, step-by-step experimental plan to safely prototype advanced MCP features (chunked file access, metadata, planner tools), see [EXPERIMENTAL-MCP-PLAN.md](../experimental/EXPERIMENTAL-MCP-PLAN.md).

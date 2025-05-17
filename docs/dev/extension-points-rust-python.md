@@ -1,4 +1,4 @@
-# Developer Guide: Rust & Python Extension Points 🐹
+# Developer Guide: Rust & Python Extension Points
 
 ## Overview
 Rust and Python extension points allow you to extend the AI Memory MCP system with high-performance or specialised modules, or to integrate with existing tools in those languages. This can be achieved via FFI, MCP server/client bridges, or by exposing compatible tools/resources.

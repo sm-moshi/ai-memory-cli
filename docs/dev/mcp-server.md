@@ -1,4 +1,4 @@
-# Developer Guide: MCP Server 🐹
+# Developer Guide: MCP Server
 
 ## Overview
 The MCP Server module exposes the memory bank and related tools to Cursor and agents via the Model Context Protocol (MCP). It acts as the bridge between the CLI, memory bank core, and Cursor's Command Palette, Output window, and agent workflows.

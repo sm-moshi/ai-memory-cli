@@ -1,13 +1,13 @@
 # AI Memory MCP Implementation Guide (v0.2.5 Target) [ARCHIVED]
 
-> ARCHIVED: This file is for historical reference only. The up-to-date implementation guide is [IMPLEMENTATION.md](../../IMPLEMENTATION.md) in the project root. Do not update this file further.
+> ARCHIVED: This file is for historical reference only. The up-to-date implementation guide is [IMPLEMENTATION.md](../../implementation.md) in the project root. Do not update this file further.
 
-> **This file is archived and superseded by [IMPLEMENTATION.md](../../IMPLEMENTATION.md) in the project root.**
+> **This file is archived and superseded by [IMPLEMENTATION.md](../../implementation.md) in the project root.**
 > Refer to the root implementation guide for the latest architecture, setup, and development checklist.
 
 ---
 
-*This file is kept for historical reference only. All actionable and up-to-date implementation steps are now in [IMPLEMENTATION.md](../../IMPLEMENTATION.md).*
+*This file is kept for historical reference only. All actionable and up-to-date implementation steps are now in [IMPLEMENTATION.md](../../implementation.md).*
 
 _Last updated: 2025-05-13_
 

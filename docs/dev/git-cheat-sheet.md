@@ -50,4 +50,4 @@ This cheat sheet shows how commits, changelogs, and version tags fit together du
 
 ---
 
-Happy releasing! 🐹
+Happy releasing!

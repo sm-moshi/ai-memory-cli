@@ -1,4 +1,4 @@
-# Developer Guide: Planner & Automation Tools 🐹
+# Developer Guide: Planner & Automation Tools
 
 ## Overview
 The Planner & Automation Tools module provides advanced features for extracting, updating, and automating project plans and notes. It leverages MCP tools like `update-current-plan` and `append-note`, and integrates with reasoning engines (clear-thought, context7, codex-keeper) for robust, AI-assisted workflows.

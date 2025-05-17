@@ -1,22 +1,25 @@
 # Logging & Cursor Config
 
+> **2025-05-17:** TODO: There is no logger utility or Output Channel integration in the codebase. This file describes planned features.
+
 This developer reference covers two core utilities used by the AI Memory MCP CLI and future VSIX:
 
 ---
 
 ## Logger (`utils/log.ts`)
 
-- **Singleton** pattern with `Logger.getInstance()`.
-- Log levels: `trace`, `debug`, `info`, `warning`, `error`, `off`.
+- Singleton pattern with `Logger.getInstance()` (planned).
+- Log levels: `trace`, `debug`, `info`, `warning`, `error`, `off` (planned).
 - Usage:
   ```ts
-  const logger = Logger.getInstance();
-  logger.setLevel(LogLevel.debug);
-  logger.info("Initializing memory bank");
-  logger.error("Failed to read file", { fileType });
+  // Planned:
+  // const logger = Logger.getInstance();
+  // logger.setLevel(LogLevel.debug);
+  // logger.info("Initializing memory bank");
+  // logger.error("Failed to read file", { fileType });
   ```
-- Integrates with the Output Channel in Cursor/VS Code:
-  - Webview and MCP server route messages via `sendLog`.
+- Integrates with the Output Channel in Cursor/VS Code (planned):
+  - Webview and MCP server route messages via `sendLog` (planned).
 
 ---
 

@@ -1,4 +1,4 @@
-# Developer Guide: Memory Bank Core 🐹
+# Developer Guide: Memory Bank Core
 
 ## Overview
 The Memory Bank Core module is the foundation of the AI Memory MCP system. It manages all file operations for the modular memory bank (`core/`, `systemPatterns/`, `techContext/`, `progress/`), ensuring robust, async, and self-healing project memory.

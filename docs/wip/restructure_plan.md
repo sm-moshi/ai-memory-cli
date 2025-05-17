@@ -1,6 +1,6 @@
 # WIP: Source & Documentation Restructuring Plan 🐹
 
-> This is a living internal restructuring plan. For the current, public-facing implementation and roadmap, see [IMPLEMENTATION.md](../../IMPLEMENTATION.md) and [ROADMAP.md](../../ROADMAP.md) in the project root. Keep these in sync.
+> This is a living internal restructuring plan. For the current, public-facing implementation and roadmap, see [IMPLEMENTATION.md](../../implementation.md) and [ROADMAP.md](../../ROADMAP.md) in the project root. Keep these in sync.
 
 _Last updated: 2025-05-13_
 
