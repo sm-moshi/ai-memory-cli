@@ -30,4 +30,4 @@ If you have questions, open an issue or start a discussion. We welcome all const
 
 ---
 
-Thank you for helping us make this project better! 🐹
+Thank you for helping us make this project better!

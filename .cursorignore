@@ -1,2 +1,5 @@
 .cursor/rules/memory-bank.mdc
-docs/not-docs/nein/
+node_modules/
+**/node_modules/
+docs/guides/
+docs/wip/

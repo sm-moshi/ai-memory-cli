@@ -1,0 +1,1 @@
+{"root":["./src/cli/cli.ts","./src/cli/commandrouter.ts","./src/core/index.ts","./src/core/memorybank.ts","./src/core/migration.ts","./src/core/templates.ts","./src/core/validation.ts","./src/types/types.ts"],"version":"5.8.3"}

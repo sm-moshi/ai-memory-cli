@@ -7,4 +7,5 @@
 		"plaintext"
 	],
 	"cursor.general.enableShadowWorkspace": true,
-	"cursor.preferNotificationsSameAsChat": true}
+	"cursor.preferNotificationsSameAsChat": true,
+}

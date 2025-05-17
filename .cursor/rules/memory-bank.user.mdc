@@ -110,13 +110,4 @@ To ensure robust, up-to-date, and best-practice solutions when working with the 
 - Document in the memory bank when a tool was used to inform a decision or plan.
 - If the user requests, always use the specified tool for their query.
 
-This ensures that all memory bank operations and extension development are grounded in the best available knowledge and practices. 🐹
-
-# 🧠 Implementation Notes & Best Practices (2025-05-11)
-
-- **Self-healing:** The extension will auto-create any missing required files/folders on startup or access, using templates. This is considered safe and does not require user consent.
-- **Shared core logic:** Both CLI and extension/server must use the same context-agnostic core logic for all memory bank operations.
-- **Cursor config automation:** The extension will automatically update `.cursor/mcp.json` to ensure Cursor can find the MCP server.
-- **Chunked file access:** Chunked file access is planned but not yet implemented. For now, all reads are full-file, with warnings for large files.
-- **Plan mode:** Plan mode and the `/plan` tool are planned features, not yet implemented. For now, planning is handled via manual updates to `progress/current.md` and `core/activeContext.md`.
-- **Consent for sensitive operations:** All file overwrites (except self-healing) require user consent. `memory-bank.mdc` may only be regenerated or overwritten with explicit user consent.
+This ensures that all memory bank operations and extension development are grounded in the best available knowledge and practices.

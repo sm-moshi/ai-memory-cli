@@ -16,6 +16,7 @@ _Last updated: 2025-05-15_
 * Permit helper MCP tools for research/reasoning.
 * Avoid pay‑walled services ⚠️ -
 * Use MCP tools where you ever needed.
+* THE memory-bank/ folder in this project isn't the end-users memory-bank, but yours!
 
 ---
 
@@ -25,7 +26,7 @@ _Last updated: 2025-05-15_
 * `core/projectbrief.md` – vision
 * `core/activeContext.md` – current focus
 * `progress/current.md` – in‑flight tasks
-* `docs/IMPLEMENTATION.md` – checklist
+* `docs/dev/implementation.md` – checklist
 
 Call **`read-memory-bank-files()`** first thing.
 
@@ -75,7 +76,6 @@ Call **`read-memory-bank-files()`** first thing.
 * Self‑healing: CLI auto‑creates missing folders/files on load.
 * Shared core logic: src/core modules feed both CLI and (future) VSIX.
 * Cursor config: CLI updates `.cursor/mcp.json` automatically.
-* Chunked access: implemented v0.4; prototype in progress.
 
 ## Release Checklist
 

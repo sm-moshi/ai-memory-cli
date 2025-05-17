@@ -1,4 +1,4 @@
-# AI Memory CLI – Changelog 🐹
+# AI Memory CLI – Changelog
 
 > **All notable changes to this project will be documented in this file.**
 > This project adheres to [Semantic Versioning](https://semver.org/).
@@ -7,32 +7,16 @@
 
 ## [Unreleased]
 
-- Added `MemoryBankCore` class in `src/core/MemoryBankCore.ts`:
-  - Async-first, concurrency-aware memory bank management
-  - Self-healing logic to auto-create missing folders/files from templates
-  - Zod-based validation for `core/projectbrief.md` structure
-  - Static template method for all required memory bank files
-  - Fully linted and idiomatic TypeScript implementation
-- Updated progress log to reflect new implementation
-- Initialisation of modular memory bank structure
-- MCP stdio server auto-registration
-- `/memory` command handler
-- Command Palette & Output window integration
-- Agent/Command (chat) support
-- Rules-driven, template-based onboarding & repair
-- Chunked read/write (v0.4)
-- Planner + `/plan` (v0.4)
-- Lightweight NLP `/note` prototype
-- Added `list` command to CLI for listing files in a memory bank subfolder
-- Updated README with CLI usage instructions and examples
-- Added `write` command to CLI for writing content to a memory bank file
-- Updated README with CLI usage instructions and examples for the write command
-- Extended Zod validation in MemoryBankCore to productContext.md and activeContext.md. Validation now enforced for all core context files.
-- Validation is now enforced on writeFile for core context files (projectbrief.md, productContext.md, activeContext.md) in MemoryBankCore. Invalid files cannot be saved. 🐹
+- Core architecture and memory logic audit completed, focusing on modularity, maintainability, and idiomatic TypeScript. 🐹
+- Refactored project structure for CLI-first design and compatibility with Cursor 0.50+ and VS Code.
+- Comprehensive analysis of Cursor versions 0.49 and 0.50, ensuring best practices and future-proofing.
+- Updated implementation plan and roadmap, including detailed milestones and directory responsibilities.
+- Improved and clarified project documentation, including README and internal planning docs.
+- Enhanced onboarding, planning, and memory bank logic for robust extension and CLI use.
 
 ---
 
-## [0.3.0-alpha] – 2025-05-16
+## [0.1.0-alpha] – 2025-05-17
 
 - Project structure and memory bank initialisation
 - CLI-first onboarding and repair
@@ -45,7 +29,7 @@
 ## Credits
 
 Originally forked from **@ipenywis/aimemory** (MIT).
-Fully re‑architected & actively maintained by **@sm‑moshi** since `v0.3.0‑alpha`.
+Fully re‑architected & actively maintained by **@sm‑moshi** since `v0.1.0‑alpha`.
 
 ---
 

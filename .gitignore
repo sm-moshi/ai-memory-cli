@@ -3,7 +3,17 @@
 
 # Repomix
 .repomix/
+
+# Docs
 docs/wip/
-docs/not-docs/
-.cursor/rules/memory-bank.mdc
+# docs/not-docs/
+
+# Node
 node_modules/
+dist/
+pnpm-lock.yaml
+
+# Cursor
+.cursor/rules/memory-bank.mdc
+
+docs/not-docs/
